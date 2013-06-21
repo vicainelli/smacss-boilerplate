@@ -1,0 +1,11 @@
+*.sassc
+*.scssc
+*.DS_Store
+sass/.sass-cache
+sass/base/config.rb
+sass/layout/config.rb
+sass/mixins/config.rb
+sass/modules/config.rb
+sass/states/config.rb
+
+.DS_Store
