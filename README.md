@@ -35,5 +35,6 @@ sass/
 |   |-- _states.sass
 |   ...
 |
-`-- all.sass            		
+|-- all.sass            		
+
 ```
