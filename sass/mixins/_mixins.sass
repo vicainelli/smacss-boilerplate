@@ -1,0 +1,14 @@
+// border-radius
+@mixin border-radius ($value)
+	-webkit-border-radius: $value
+	-moz-border-radius: $value
+	border-radius: $value
+
+
+// button size
+@mixin button-size ( $padding, $f-size, $f-weight)
+	padding: $padding
+	font:
+		size: $f-size
+		weight: $f-weight
+	line-height: ($f-size + ($f-size/2))
