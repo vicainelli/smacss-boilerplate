@@ -1,11 +1,15 @@
-// Base buttons
+/* =============================== */
+/*             BUTTONS             */
+/* =============================== */
+
+/* Base buttons */
 a.button, button.button, .button
-	padding: 7px 25px
-	@include border-radius (5px)
+	padding: 0.4375em 1.5625em
+	@include border-radius (0.3125em)
 	font:
-		size: 14px
+		size: 0.875em
 		weight: 300
-	line-height: 21px
+	line-height: 1.5em
 	text-decoration: none
 	color: #FFFFFF
 	background: #808080
@@ -15,36 +19,35 @@ a.button, button.button, .button
 
 
 /* ==========  SIZES  ========== */
-// Mixin for button size
-// @mixin button-size ( $padding, $f-size, $f-weight, $l-height)
 
-// Small button
+/* Small button */
 a.small-button, button.small-button, .small-button
-	@include button-size ( (7px 17px), 12px, 300)
+	font-size: 0.75em
 
-// Medium button
+/* Medium button */
 a.medium-button, button.medium-button, .medium-button
-	@include button-size ( (7px 25px), 18px, 400)
+	font-size: 1em
 
-// Large button
+/* Large button */
 a.large-button, button.large-button, .large-button
-	@include button-size ( (7px 25px), 24px, 400)
+	font-size: 1.5em
 
-// X Large button
-a.xlarge-button, button.xlarge-button, .xlarge-button
-	@include button-size ( (7px 25px), 30px, 400)
+/* X Large button */
+a.xlarger-button, button.xlarger-button, .xlarger-button
+	font-size: 1.875em
 
 
 
 /* ==========  COLORS  ========== */
-// Primary button
+
+/* Primary button */
 a.primary-button, button.primary-button, .primary-button
 	color: #FFFFFF
 	background: $primary-color
 	&:hover
 		background: darken($primary-color, 5%)
 
-// Secondary button
+/* Secondary button */
 a.secondary-button, button.secondary-button, .secondary-button
 	color: #FFFFFF
 	background: $secondary-color
@@ -56,6 +59,21 @@ a.secondary-button, button.secondary-button, .secondary-button
 
 /* ==========  FORMATS  ========== */
 
-// Square
+/* Square */
 a.square-button, button.square-button, .square-button
 	@include border-radius (0)
+
+/* Round Right */
+a.round-r-button, button.round-r-button, .round-r-button
+	@include border-radius (1.2em 0 0 1.2em)
+
+/* Round Left */
+a.round-l-button, button.round-l-button, .round-l-button
+	@include border-radius (0 1.2em 1.2em 0)
+
+/* Round both */
+a.round-both-button, button.round-both-button, .round-both-button
+	@include border-radius (1.2em )
+
+/*-----  End of BUTTONS  ------*/
+
