@@ -4,11 +4,19 @@
 	-moz-border-radius: $value
 	border-radius: $value
 
+// box-shadow
+@mixin box-shadow ($value)
+  -webkit-box-shadow: $value
+  -moz-box-shadow: $value
+  box-shadow: $value
 
-// button size
-@mixin button-size ( $padding, $f-size, $f-weight)
-	padding: $padding
-	font:
-		size: $f-size
-		weight: $f-weight
-	line-height: ($f-size + ($f-size/2))
+// clearfix
+@mixin clearfix
+  &
+    *zoom: 1
+  &:before, &:after
+    content: ""
+    display: table
+  &:after
+    clear: both
+
