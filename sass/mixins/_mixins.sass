@@ -1,16 +1,43 @@
-// border-radius
-@mixin border-radius ($value)
-	-webkit-border-radius: $value
-	-moz-border-radius: $value
-	border-radius: $value
+// ===========================================
+//                   FONTS
+// ===========================================
 
-// box-shadow
-@mixin box-shadow ($value)
-  -webkit-box-shadow: $value
-  -moz-box-shadow: $value
-  box-shadow: $value
+// Font familys
+$arial: Arial, sans-serif
+$georgia: Georgia, Cambria, "Times New Roman", Times, serif
+$helvetica: "Helvetica Neue", Helvetica, Arial, sans-serif
+$lucida-grande: "Lucida Grande", Tahoma, Verdana, Arial, sans-serif
+$monospace: "Bitstream Vera Sans Mono", Consolas, Courier, monospace
+$verdana: Verdana, Geneva, sans-serif
 
-// clearfix
+$base-font: $helvetica
+
+// Font complete
+@mixin font-complete ($fcolor: #323232, $ffamily: $helvetica, $fsize: 0.875em, $fstyle: normal, $fweight: normal)
+  color: $fcolor
+  font:
+    family: $ffamily
+    size: $fsize
+    style: $fstyle
+    weight: $fweight
+
+// Font basic
+@mixin font-basic ($fsize, $fweight, $fcolor)
+  font:
+    size: $fsize
+    weight: $fweight
+  color: $fcolor
+
+// -------------  End of FONTS  --------------
+
+
+
+
+// ===========================================
+//                   BOXES
+// ===========================================
+
+// Clearfix
 @mixin clearfix
   &
     *zoom: 1
@@ -19,4 +46,104 @@
     display: table
   &:after
     clear: both
+
+
+// Box sizing
+@mixin box-sizing ($value: border-box)
+  -webkit-box-sizing: $value
+  -moz-box-sizing: $value
+  box-sizing: $value
+
+// Box shadow
+@mixin box-shadow ($value)
+  -webkit-box-shadow: $value
+  -moz-box-shadow: $value
+  box-shadow: $value
+
+// Width Calc
+@mixin w-calc ( $value )
+  width: -webkit-calc(100% - $value)
+  width: -moz-calc(100% - $value)
+  width: calc(100% - $value)
+
+// Height Calc
+@mixin h-calc ( $value )
+  height: -webkit-calc(100% - $value)
+  height: -moz-calc(100% - $value)
+  height: calc(100% - $value)
+
+
+// Border Radius
+@mixin border-radius ($ValueBdRadius)
+  -webkit-border-radius: $ValueBdRadius
+  -moz-border-radius: $ValueBdRadius
+  -ms-border-radius: $ValueBdRadius
+  -o-border-radius: $ValueBdRadius
+  border-radius: $ValueBdRadius
+
+
+// Appearance
+@mixin appearance ($ValueAP)
+  -webkit-appearance: $ValueAP
+  -moz-appearance: $ValueAP
+  appearance: $ValueAP
+
+
+// ==========  Multiple Columns  ==========
+@mixin mult-columm ($count, $gap)
+  -moz-column-count: $count
+  -webkit-column-count: $count
+  column-count: $count
+  -moz-column-gap: $gap
+  -webkit-column-gap: $gap
+  column-gap: $gap
+
+
+// -------------  End of BOXES  --------------
+
+
+
+
+
+
+
+// ==========  Gradients  ==========
+
+// Linear gradient
+@mixin linear-gradient ($ColorStart, $ColorFinish)
+  background-repeat: repeat-x
+  background-image: -khtml-gradient(linear, left top, left bottom, from($ColorStart), to($ColorFinish))
+  background-image: -moz-linear-gradient(top, $ColorStart, $ColorFinish)
+  background-image: -ms-linear-gradient(top, $ColorStart, $ColorFinish)
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, $ColorStart), color-stop(100%, $ColorFinish))
+  background-image: -webkit-linear-gradient(top, $ColorStart, $ColorFinish)
+  background-image: -o-linear-gradient(top, $ColorStart, $ColorFinish)
+  background-image: linear-gradient($ColorStart, $ColorFinish)
+
+
+
+
+// ================================================
+//                   ANIMATIONS
+// ================================================
+
+
+// Transitions
+@mixin trans-bg ($Duration, $Direction)
+  -webkit-transition: background-color $Duration $Direction
+  -moz-transition: background-color $Duration $Direction
+  -ms-transition: background-color $Duration $Direction
+  -o-transition: background-color $Duration $Direction
+  transition: background-color $Duration $Direction
+
+// -------------  End of ANIMATIONS  --------------
+
+
+
+
+
+
+
+
+
 

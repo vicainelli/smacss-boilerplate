@@ -8,4 +8,8 @@ sass/mixins/config.rb
 sass/modules/config.rb
 sass/states/config.rb
 
+css/all.css
+
 .DS_Store
+
+index.html
