@@ -1,8 +1,8 @@
-/* =============================== */
-/*             BUTTONS             */
-/* =============================== */
+// ===============================
+//             BUTTONS            
+// ===============================
 
-/* Base buttons */
+// Base buttons
 a.button, button.button, .button
 	padding: 0.4375em 1.5625em
 	border: 0
@@ -19,62 +19,62 @@ a.button, button.button, .button
 
 
 
-/* ==========  SIZES  ========== */
+// ==========  SIZES  ==========
 
-/* Small button */
+// Small button
 a.small-button, button.small-button, .small-button
 	font-size: 0.75em
 
-/* Medium button */
+// Medium button
 a.medium-button, button.medium-button, .medium-button
 	font-size: 1em
 
-/* Large button */
+// Large button
 a.large-button, button.large-button, .large-button
 	font-size: 1.5em
 
-/* X Large button */
+// X Large button
 a.xlarger-button, button.xlarger-button, .xlarger-button
 	font-size: 1.875em
 
 
 
-/* ==========  COLORS  ========== */
+// ==========  COLORS  ==========
 
-/* Primary button */
+// Primary button
 a.primary-button, button.primary-button, .primary-button
 	color: #FFFFFF
-	// background: $primary-color
+	background: $color-primary
 	&:hover
-		background: darken($primary-color, 5%)
+		background: darken($color-primary, 5%)
 
-/* Secondary button */
+// Secondary button
 a.secondary-button, button.secondary-button, .secondary-button
 	color: #FFFFFF
-	// background: $secondary-color
+	// background: $color-secondary
 	&:hover
-		background: lighten($secondary-color, 3%)
+		background: lighten($color-secondary, 3%)
 
 
 
 
-/* ==========  FORMATS  ========== */
+// ==========  FORMATS  ==========
 
-/* Square */
+// Square
 a.square-button, button.square-button, .square-button
 	@include border-radius (0)
 
-/* Round Right */
+// Round Right
 a.round-r-button, button.round-r-button, .round-r-button
 	@include border-radius (1.2em 0 0 1.2em)
 
-/* Round Left */
+// Round Left
 a.round-l-button, button.round-l-button, .round-l-button
 	@include border-radius (0 1.2em 1.2em 0)
 
-/* Round both */
+// Round both
 a.round-both-button, button.round-both-button, .round-both-button
 	@include border-radius (1.2em )
 
-/*-----  End of BUTTONS  ------*/
+/*-----  End of BUTTONS  -----
 

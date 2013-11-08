@@ -2,15 +2,6 @@
 //                   FONTS
 // ===========================================
 
-// Font familys
-$arial:  Arial, sans-serif
-$georgia: Georgia, Cambria, "Times New Roman", Times, serif
-$helvetica: "Helvetica Neue", Helvetica, Arial, sans-serif
-$lucida-grande: "Lucida Grande", Tahoma, Verdana, Arial, sans-serif
-$monospace: "Bitstream Vera Sans Mono", Consolas, Courier, monospace
-$verdana: Verdana, Geneva, sans-serif
-
-$base-font: $helvetica
 
 // Font complete
 @mixin font-complete ( $family: $helvetica,  $size: 0.875em,  $weight: normal, $style: normal,  $color: #323232)
@@ -36,6 +27,7 @@ $base-font: $helvetica
 // ===========================================
 //                   BOX / MODULES
 // ===========================================
+
 
 // Clearfix
 @mixin clearfix
@@ -135,7 +127,7 @@ $base-font: $helvetica
 // ================================================
 
 // Transitions
-@mixin trans-bg ($duration, $direction)
+@mixin transition-background ($duration, $direction)
 	-webkit-transition: background-color $duration $direction
 	-moz-transition: background-color $duration $direction
 	-ms-transition: background-color $duration $direction
