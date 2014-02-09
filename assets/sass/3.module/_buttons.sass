@@ -1,80 +1,49 @@
-// ===============================
-//             BUTTONS            
-// ===============================
-
-// Base buttons
 a.button, button.button, .button
-	padding: 0.4375em 1.5625em
-	border: 0
-	@include border-radius (0.3125em)
-	font:
-		size: 0.875em
-		weight: 300
+	$start-color: #ffffff
+	$end-color: 	#efefef
+	padding: emCalc(5px) emCalc(18px)
+	border: emCalc(1px) solid #dddddd
+	border-bottom-color: #b4b4b4
+	color: #000000
+	@include background-gradient($start-color, #efefef)
+	font-size: emCalc(16px)
 	line-height: 1.5em
 	text-decoration: none
-	color: #FFFFFF
-	background: #808080
 	cursor: pointer
 	display: inline-block
-
-
-
-// ==========  SIZES  ==========
-
-// Small button
-a.small-button, button.small-button, .small-button
-	font-size: 0.75em
-
-// Medium button
-a.medium-button, button.medium-button, .medium-button
-	font-size: 1em
-
-// Large button
-a.large-button, button.large-button, .large-button
-	font-size: 1.5em
-
-// X Large button
-a.xlarger-button, button.xlarger-button, .xlarger-button
-	font-size: 1.875em
-
-
-
-// ==========  COLORS  ==========
-
-// Primary button
-a.primary-button, button.primary-button, .primary-button
-	color: #FFFFFF
-	background: $color-primary
 	&:hover
-		background: darken($color-primary, 5%)
+		@include background-gradient(darken($start-color, 2%), darken($end-color, 8%))
 
-// Secondary button
-a.secondary-button, button.secondary-button, .secondary-button
-	color: #FFFFFF
-	// background: $color-secondary
-	&:hover
-		background: lighten($color-secondary, 3%)
+.button
+	&.rounded
+		@include border-radius (3px)
 
+	&.xsmall
+		font-size: emCalc(12px)
+	&.small
+		font-size: emCalc(14px)
+	&.medium
+		font-size: emCalc(20px)
+	&.large
+		font-size: emCalc(24px)
+	&.xlarge
+		font-size: emCalc(28px)
 
+	&.green
+		$start-color: #72b75c
+		$end-color: 	#73af55
+		border-color: #6ba849
+		border-bottom-color: #548d40
+		color: #ffffff
+		@include background-gradient($start-color, $end-color)
+		&:hover
+			@include background-gradient(darken($start-color, 2%), darken($end-color, 8%))
 
-
-// ==========  FORMATS  ==========
-
-// Square
-a.square-button, button.square-button, .square-button
-	@include border-radius (0)
-
-// Round Right
-a.round-r-button, button.round-r-button, .round-r-button
-	@include border-radius (1.2em 0 0 1.2em)
-
-// Round Left
-a.round-l-button, button.round-l-button, .round-l-button
-	@include border-radius (0 1.2em 1.2em 0)
-
-// Round both
-a.round-both-button, button.round-both-button, .round-both-button
-	@include border-radius (1.2em )
-
-/*-----  End of BUTTONS  -----
-
+	&.pill
+		@include border-radius (emCalc(18px))
+	
+	&.pill-left
+		@include border-radius (emCalc(18px) 0 0 emCalc(18px))
+	
+	&.pill-right
+		@include border-radius (0 emCalc(18px) emCalc(18px) 0)

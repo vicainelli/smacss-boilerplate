@@ -1,12 +1,40 @@
 @import normalize, typography
 
+
+// Clearfix
+@mixin clearfix
+	&
+		*zoom: 1
+	&:before, &:after
+		content: ""
+		display: table
+	&:after
+		clear: both
+
+
+// Function em calc
+$em-base: 16px !default
+@function emCalc($pxWidth)
+	@return $pxWidth / $em-base * 1em
+
+
 body
 	font-family: $base-font
+	font-size: $em-base
+
+
+*, *:after, *:before
+	-webkit-box-sizing: border-box
+	-moz-box-sizing: border-box
+	-ms-box-sizing: border-box
+	box-sizing: border-box
+
 
 .wrap
 	width: 960px
 	margin: 0 auto
 	background: #333
+
 
 .row
 	@include clearfix

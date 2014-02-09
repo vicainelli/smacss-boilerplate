@@ -1,50 +1,14 @@
-// ===========================================
-//                   FONTS
-// ===========================================
 
+@mixin background-gradient($startColor: #3C3C3C, $endColor: #999999)
+	background-color: $startColor
+	background-image: -webkit-gradient(linear, left top, left bottom, from($startColor), to($endColor))
+	background-image: -webkit-linear-gradient(top, $startColor, $endColor)
+	background-image:    -moz-linear-gradient(top, $startColor, $endColor)
+	background-image:     -ms-linear-gradient(top, $startColor, $endColor)
+	background-image:      -o-linear-gradient(top, $startColor, $endColor)
+	background-image:         linear-gradient(top, $startColor, $endColor)
+	filter:            progid:DXImageTransform.Microsoft.gradient(startColorStr='#{$startColor}', endColorStr='#{$endColor}')
 
-// Font complete
-@mixin font-complete ( $family: $helvetica,  $size: 0.875em,  $weight: normal, $style: normal,  $color: #323232)
-	font:
-		family: $family
-		size: $size
-		style: $style
-		weight: $weight
-	color: $color
-
-// Font basic
-@mixin font-basic ($size, $weight, $color)
-	font:
-		size: $size
-		weight: $weight
-	color: $color
-
-// -------------  End of FONTS  --------------
-
-
-
-
-// ===========================================
-//                   BOX / MODULES
-// ===========================================
-
-
-// Clearfix
-@mixin clearfix
-	&
-		*zoom: 1
-	&:before, &:after
-		content: ""
-		display: table
-	&:after
-		clear: both
-
-
-// Box sizing
-@mixin box-sizing ($value: border-box)
-	-webkit-box-sizing: $value
-	-moz-box-sizing: $value
-	box-sizing: $value
 
 // Box shadow
 @mixin box-shadow ($value)
@@ -92,34 +56,6 @@
 
 
 // -------------  End of BOX / MODULES  --------------
-
-
-
-
-
-
-
-
-
-// ===============================================
-//                   Gradients
-// ===============================================
-
-// Linear gradient
-@mixin linear-gradient ($star, $finish)
-	background-repeat: repeat-x
-	background-image: -moz-linear-gradient(top, $star, $finish)
-	background-image: -ms-linear-gradient(top, $star, $finish)
-	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, $star), color-stop(100%, $finish))
-	background-image: -webkit-linear-gradient(top, $star, $finish)
-	background-image: -o-linear-gradient(top, $star, $finish)
-	background-image: linear-gradient($star, $finish)
-
-// -------------  End of Gradients  --------------
-
-
-
-
 
 
 // ================================================
