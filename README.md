@@ -2,7 +2,7 @@
 
 **SMACSS Boilerplate** é um conjunto de arquivos .sass para inicio rápido de projetos.
 
-Com o auxilio do método [SMACSS](http://smacss.com/) (Scalable and Modular Architecture for CSS) e com alguns vídeos que assisti na internet eu montei esse pack para facilitar o meu workflow nos meus projetos.
+Com o auxilio do método [SMACSS](http://smacss.com/) (Scalable and Modular Architecture for CSS) e com alguns vídeos que assisti eu montei esse pack para facilitar o meu workflow nos meus projetos.
 
 ### Estrutura (pasta sass)
 
