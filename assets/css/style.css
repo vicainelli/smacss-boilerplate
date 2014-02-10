@@ -212,7 +212,7 @@ a.button, button.button, .button {
   background-image: linear-gradient(top, #ffffff, #efefef);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='white', endColorStr='#efefef');
   font-size: 1em;
-  line-height: 1.5em;
+  line-height: 1.5;
   text-decoration: none;
   cursor: pointer;
   display: inline-block;
